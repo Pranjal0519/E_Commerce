@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.site-footer {
+    background-color: #f8f9fa; /* Light background matching header */
+    color: #333; /* Dark text color */
+    padding: 40px 20px; /* Generous padding */
+    margin-top: 50px; /* Space from main content */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Distribute sections evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 250px; /* Flexible width with minimum */
+    margin: 15px; /* Margin between sections */
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #333; /* Dark text headings */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db; /* Blue underline */
+    padding-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #3498db; /* Blue links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #2980b9; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+.email-signup {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.email-signup input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.email-signup button {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.email-signup button:hover {
+    background-color: #2980b9;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.instagram-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd; /* Subtle border */
+    font-size: 0.9em;
+    color: #333; /* Dark gray text */
+}
+
+/* Contact Page Styles */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-map {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-map iframe {
+    border-radius: 8px;
+}
+
+.contact-form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form .form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
