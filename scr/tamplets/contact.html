@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/scr/css/index.css">
+    <link rel="stylesheet" href="/scr/css/contact.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="d-flex justify-content-around p-3 bg-light">
+            <h1 class="logo">my cartjoy</h1>
+            <nav class="main-nav">
+                <ul class="d-flex md-5 gap-3 list-unstyled ">
+                    <li><a href="/index.html" class="btn btn-primary">home</a></li>
+                    <li><a href="/scr/tamplets/product.html" class="btn btn-primary">products</a></li>
+                    <li ><a href="/scr/tamplets/about.html" class="btn btn-primary">about us</a></li>
+                    <li><a href="/scr/tamplets/contact.html" class="btn btn-primary">contact</a></li>
+                    <li><a href="/scr/tamplets/cart.html" class="btn btn-primary">cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="/scr/tamplets/privacy.html" class="btn btn-primary">privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+
+    <main class="contact-container">
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.5696321891374!2d73.84184931088619!3d18.50744788726789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9c5b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sWarje%2C%20Pune!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-form-div">
+            <form class="contact-form">
+                <div class="mb-3">
+                    <table>
+                        <tr class="d-flex justify-content-around">
+                            <td> <label for="name" class="form-label">First</label>
+                                <input type="text" class="form-control" id="name" placeholder="First Name">
+                            </td>
+                            <td> <label for="name" class="form-label">Middel </label>
+                                <input type="text" class="form-control" id="name" placeholder="Middel Name">
+                            </td>
+                            <td> <label for="name" class="form-label">Last</label>
+                                <input type="text" class="form-control" id="name" placeholder="Last Name">
+                            </td>
+                        </tr>
+                    </table>  
+                </div>
+                <div>
+                    <table class="mb-3 tb1">
+                        <tr class="d-flex justify-content-between">
+                            <td>
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            </td>
+                            <td>
+                                <label for="email" class="form-label">Mobile </label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>plot no 35 durandhar colony warje Pune</p>
+                <p>+2 392 3929 210</p>
+                <p>tech.india.pranjal@gmail.com</p>
+                <div class="email-signup">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">→</button>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Latest News</h3>
+                <div class="news-item">
+                    <img src="news-image.jpg" alt="news">
+                    <p>Discover our latest home decor collection featuring elegant designs and modern aesthetics for your living space.</p>
+                    <small>Oct 16, 2019 Admin 18</small>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Information</h3>
+                <ul class="list-unstyled">
+                    <li><a href="/scr/tamplets/about.html" class="footer-link">About</a></li>
+                    <li><a href="/scr/tamplets/products.html" class="footer-link">Products</a></li>
+                    <li><a href="/scr/tamplets/blog.html" class="footer-link">Blog</a></li>
+                    <li><a href="/scr/tamplets/contact.html" class="footer-link">Contact</a></li>
+                    <li><a href="/scr/tamplets/help.html" class="footer-link">Help & Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Instagram</h3>
+                <div class="instagram-grid">
+                    <img src="instagram-1.jpg" alt="instagram">
+                    <img src="instagram-2.jpg" alt="instagram">
+                    <img src="instagram-3.jpg" alt="instagram">
+                    <img src="instagram-4.jpg" alt="instagram">
+                    <img src="instagram-5.jpg" alt="instagram">
+                    <img src="instagram-6.jpg" alt="instagram">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright ©2021 All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
