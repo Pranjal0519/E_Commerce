@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <title>Products - My CartJoy</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/product-page.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>products</title>
 </head>
 <body>
-     <header class="site-header">
+    <!-- Header -->
+    <header class="site-header">
         <div class="d-flex justify-content-around p-3 bg-light">
             <h1 class="logo">my cartjoy</h1>
             <nav class="main-nav">
-                <ul class="d-flex md-5 gap-3 list-unstyled ">
+                <ul class="d-flex gap-3 list-unstyled">
                     <li><a href="/index.html" class="btn btn-primary">home</a></li>
                     <li><a href="/scr/tamplets/product.html" class="btn btn-primary">products</a></li>
-                    <li ><a href="/scr/tamplets/about.html" class="btn btn-primary">about us</a></li>
+                    <li><a href="/scr/tamplets/about.html" class="btn btn-primary">about us</a></li>
                     <li><a href="/scr/tamplets/contact.html" class="btn btn-primary">contact</a></li>
                     <li><a href="/scr/tamplets/cart.html" class="btn btn-primary">cart (<span id="cart-count">0</span>)</a></li>
                     <li><a href="/scr/tamplets/privacy.html" class="btn btn-primary">privacy</a></li>
@@ -23,39 +25,361 @@
             </nav>
         </div>
     </header>
-    <h1>new arrivals</h1>
-    <p>check out our latest products</p>
-    <header class="site-header">
-        <div class="container header-flex"> 
-            <h1 class="logo">All Products</h1> 
-            <nav class="nav"> <a href="/index.html">Home</a> 
-                <a href="/scr/tamplets/cart.html">Cart (<span id="cart-count">0</span>)</a>
-             </nav>
-             </div> 
-            </header>
-            <main class="container">
-                <section class="filters">
-                    <input type="text" id="search" placeholder="Search products...">
-                    <select id="category-filter">
-                        <option value="">All categories</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="audio">Audio</option>
-                        <option value="accessories">Accessories</option>
-                    </select>
-                    <select id="price-filter">
-                        <option value="">All prices</option>
-                        <option value="0-1000">₹0–₹1,000</option>
-                        <option value="1000-10000">₹1,000–₹10,000</option>
-                        <option value="10000-100000">₹10,000+</option>
-                    </select>
-                    </section>
-                    <div class="product-list" id="product-list"></div>
-                    
-            </main>
-            <footer class="site-footer">
-                <div class="container">
-                    <p>© 2026 My cartjoy</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Discover Handcrafted Excellence</h1>
+            <p>Explore unique, artisan-made products across diverse categories</p>
+            <input type="text" class="search-input" placeholder="🔍 Search products...">
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <main class="products-container">
+        <!-- Personal Care Category -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>🧴 Personal Care</h2>
+                <p>Soaps, bath bombs, essential oils, natural cosmetics, scented candles, spa kits</p>
+            </div>
+            <div class="products-row">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=250&h=250&fit=crop" alt="Organic Soap">
+                        <span class="product-badge">-30%</span>
+                    </div>
+                    <h3>Organic Handmade Soap</h3>
+                    <p class="product-desc">Natural ingredients, eco-friendly</p>
+                    <div class="price-section">
+                        <span class="price">₹299</span>
+                        <span class="original-price">₹429</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
                 </div>
-            </footer>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=250&h=250&fit=crop" alt="Bath Bomb">
+                        <span class="product-badge">-25%</span>
+                    </div>
+                    <h3>Luxury Bath Bombs</h3>
+                    <p class="product-desc">Aromatherapy spa experience</p>
+                    <div class="price-section">
+                        <span class="price">₹399</span>
+                        <span class="original-price">₹533</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=250&h=250&fit=crop" alt="Essential Oils">
+                        <span class="product-badge">-20%</span>
+                    </div>
+                    <h3>Essential Oil Set</h3>
+                    <p class="product-desc">Pure, natural aromatherapy oils</p>
+                    <div class="price-section">
+                        <span class="price">₹599</span>
+                        <span class="original-price">₹749</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600356776898-70f2b7ab8ad0?w=250&h=250&fit=crop" alt="Scented Candles">
+                        <span class="product-badge">-35%</span>
+                    </div>
+                    <h3>Scented Candles</h3>
+                    <p class="product-desc">Hand-poured soy candles</p>
+                    <div class="price-section">
+                        <span class="price">₹349</span>
+                        <span class="original-price">₹539</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Decor Category -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>🏠 Home Decor</h2>
+                <p>Pottery, macrame, wooden items, textiles, unique lamps, wall art, planters, organizers</p>
+            </div>
+            <div class="products-row">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=250&h=250&fit=crop" alt="Pottery">
+                        <span class="product-badge">-40%</span>
+                    </div>
+                    <h3>Handmade Pottery Vase</h3>
+                    <p class="product-desc">Artisan ceramic craftsmanship</p>
+                    <div class="price-section">
+                        <span class="price">₹899</span>
+                        <span class="original-price">₹1,499</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=250&h=250&fit=crop" alt="Macrame">
+                        <span class="product-badge">-30%</span>
+                    </div>
+                    <h3>Macrame Wall Hanging</h3>
+                    <p class="product-desc">Bohemian style wall decor</p>
+                    <div class="price-section">
+                        <span class="price">₹699</span>
+                        <span class="original-price">₹999</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=250&h=250&fit=crop" alt="Wooden Art">
+                        <span class="product-badge">-25%</span>
+                    </div>
+                    <h3>Wooden Decorative Art</h3>
+                    <p class="product-desc">Rustic handcrafted wooden piece</p>
+                    <div class="price-section">
+                        <span class="price">₹799</span>
+                        <span class="original-price">₹1,066</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=250&h=250&fit=crop" alt="Cushion">
+                        <span class="product-badge">-20%</span>
+                    </div>
+                    <h3>Embroidered Cushions</h3>
+                    <p class="product-desc">Handwoven textile perfection</p>
+                    <div class="price-section">
+                        <span class="price">₹499</span>
+                        <span class="original-price">₹625</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fashion & Accessories Category -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>👗 Fashion & Accessories</h2>
+                <p>Handmade jewelry, custom t-shirts, tote bags, embroidered items, leather goods, keychains</p>
+            </div>
+            <div class="products-row">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=250&h=250&fit=crop" alt="Jewelry">
+                        <span class="product-badge">-35%</span>
+                    </div>
+                    <h3>Handmade Beaded Jewelry</h3>
+                    <p class="product-desc">Unique artisan design</p>
+                    <div class="price-section">
+                        <span class="price">₹549</span>
+                        <span class="original-price">₹849</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=250&h=250&fit=crop" alt="T-shirt">
+                        <span class="product-badge">-40%</span>
+                    </div>
+                    <h3>Custom Printed T-Shirt</h3>
+                    <p class="product-desc">100% organic cotton</p>
+                    <div class="price-section">
+                        <span class="price">₹349</span>
+                        <span class="original-price">₹583</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1595777712802-61b45d80019d?w=250&h=250&fit=crop" alt="Tote Bag">
+                        <span class="product-badge">-30%</span>
+                    </div>
+                    <h3>Canvas Tote Bag</h3>
+                    <p class="product-desc">Eco-friendly & spacious</p>
+                    <div class="price-section">
+                        <span class="price">₹449</span>
+                        <span class="original-price">₹643</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=250&h=250&fit=crop" alt="Leather Goods">
+                        <span class="product-badge">-45%</span>
+                    </div>
+                    <h3>Leather Accessory Set</h3>
+                    <p class="product-desc">Premium handcrafted leather</p>
+                    <div class="price-section">
+                        <span class="price">₹999</span>
+                        <span class="original-price">₹1,819</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Edibles Category -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>🍰 Edibles & Specialty Foods</h2>
+                <p>Baked goods, jams, sauces, honey, and custom gift baskets</p>
+            </div>
+            <div class="products-row">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=250&h=250&fit=crop" alt="Baked Goods">
+                        <span class="product-badge">-20%</span>
+                    </div>
+                    <h3>Artisan Baked Cookies</h3>
+                    <p class="product-desc">Fresh homemade treats</p>
+                    <div class="price-section">
+                        <span class="price">₹299</span>
+                        <span class="original-price">₹375</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1589985391892-8fb5e565efaf?w=250&h=250&fit=crop" alt="Jam">
+                        <span class="product-badge">-25%</span>
+                    </div>
+                    <h3>Homemade Fruit Jam</h3>
+                    <p class="product-desc">No preservatives added</p>
+                    <div class="price-section">
+                        <span class="price">₹249</span>
+                        <span class="original-price">₹333</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=250&h=250&fit=crop" alt="Honey">
+                        <span class="product-badge">-30%</span>
+                    </div>
+                    <h3>Pure Raw Honey</h3>
+                    <p class="product-desc">Organic farm-fresh honey</p>
+                    <div class="price-section">
+                        <span class="price">₹399</span>
+                        <span class="original-price">₹571</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1580959375944-abd7e991f971?w=250&h=250&fit=crop" alt="Gift Basket">
+                        <span class="product-badge">-50%</span>
+                    </div>
+                    <h3>Gourmet Gift Basket</h3>
+                    <p class="product-desc">Curated specialty foods</p>
+                    <div class="price-section">
+                        <span class="price">₹1,499</span>
+                        <span class="original-price">₹2,999</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Products Category -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>🎨 Digital Products</h2>
+                <p>Art prints, digital illustrations, DIY tutorials, and online courses</p>
+            </div>
+            <div class="products-row">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=250&h=250&fit=crop" alt="Art Print">
+                        <span class="product-badge">-50%</span>
+                    </div>
+                    <h3>Digital Art Print Collection</h3>
+                    <p class="product-desc">Instant download, printable</p>
+                    <div class="price-section">
+                        <span class="price">₹199</span>
+                        <span class="original-price">₹399</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=250&h=250&fit=crop" alt="Illustration">
+                        <span class="product-badge">-40%</span>
+                    </div>
+                    <h3>Custom Digital Illustrations</h3>
+                    <p class="product-desc">Professional design files</p>
+                    <div class="price-section">
+                        <span class="price">₹399</span>
+                        <span class="original-price">₹665</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f70504ab0?w=250&h=250&fit=crop" alt="Tutorial">
+                        <span class="product-badge">-35%</span>
+                    </div>
+                    <h3>DIY Video Tutorial Course</h3>
+                    <p class="product-desc">Step-by-step guidance</p>
+                    <div class="price-section">
+                        <span class="price">₹499</span>
+                        <span class="original-price">₹768</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1533519227268-461353132943?w=250&h=250&fit=crop" alt="Online Course">
+                        <span class="product-badge">-55%</span>
+                    </div>
+                    <h3>Online Creative Masterclass</h3>
+                    <p class="product-desc">Lifetime access, certificates</p>
+                    <div class="price-section">
+                        <span class="price">₹799</span>
+                        <span class="original-price">₹1,777</span>
+                    </div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <p>&copy; 2026 my cartjoy.all right reserved</p>
+            <div class="social-links">
+                <a href="#" class="social-link">facebook</a>
+                <a href="#" class="social-link">twitter</a>
+                <a href="#" class="social-link">instagram</a>
+            </div>
+            <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="index.html" class="footer-nav-link">home</a></li>
+                    <li class="footer-nav-item"><a href="products.html" class="footer-nav-link">products</a></li>
+                    <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">about us</a></li>
+                    <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">contact</a></li>
+                    <li class="footer-nav-item"><a href="privacy.html" class="footer-nav-link">privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="../../scr/js/products.js"></script>
 </body>
 </html>

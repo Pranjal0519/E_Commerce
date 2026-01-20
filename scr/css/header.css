@@ -1,0 +1,156 @@
+/* Global Header Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Site Header */
+.site-header {
+    background-color: #f8f9fa;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .d-flex {
+    display: flex;
+    justify-content: around;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.site-header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.site-header .main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-header .main-nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.site-header .main-nav .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.site-header .main-nav .btn-primary:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.site-header .main-nav .btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Cart Count Badge */
+#cart-count {
+    background-color: #ff6b6b;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Responsive Design for Header */
+@media (max-width: 1024px) {
+    .site-header .d-flex {
+        flex-direction: column;
+        gap: 15px;
+        padding: 12px 15px;
+    }
+
+    .site-header .main-nav ul {
+        gap: 10px;
+    }
+
+    .site-header .main-nav .btn-primary {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .site-header .logo {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header .d-flex {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px 10px;
+    }
+
+    .site-header .logo {
+        font-size: 22px;
+    }
+
+    .site-header .main-nav ul {
+        gap: 8px;
+        flex-direction: row;
+    }
+
+    .site-header .main-nav .btn-primary {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header .d-flex {
+        flex-direction: column;
+        gap: 10px;
+        padding: 8px 8px;
+    }
+
+    .site-header .logo {
+        font-size: 20px;
+    }
+
+    .site-header .main-nav ul {
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .site-header .main-nav .btn-primary {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    #cart-count {
+        padding: 1px 5px;
+        font-size: 10px;
+    }
+}

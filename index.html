@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="scr/css/index.css">
+    <title>Home - My CartJoy</title>
+    <link rel="stylesheet" href="scr/css/header.css">
+    <link rel="stylesheet" href="scr/css/home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header class="site-header">
         <div class="d-flex justify-content-around p-3 bg-light">
             <h1 class="logo">my cartjoy</h1>
             <nav class="main-nav">
-                <ul class="d-flex md-5 gap-3 list-unstyled ">
+                <ul class="d-flex gap-3 list-unstyled">
                     <li><a href="/index.html" class="btn btn-primary">home</a></li>
                     <li><a href="/scr/tamplets/product.html" class="btn btn-primary">products</a></li>
-                    <li ><a href="/scr/tamplets/about.html" class="btn btn-primary">about us</a></li>
+                    <li><a href="/scr/tamplets/about.html" class="btn btn-primary">about us</a></li>
                     <li><a href="/scr/tamplets/contact.html" class="btn btn-primary">contact</a></li>
                     <li><a href="/scr/tamplets/cart.html" class="btn btn-primary">cart (<span id="cart-count">0</span>)</a></li>
                     <li><a href="/scr/tamplets/privacy.html" class="btn btn-primary">privacy</a></li>
@@ -24,61 +25,191 @@
             </nav>
         </div>
     </header>
-    <main class="container">
-        <section class="hero">
-            <img src="C:\Users\lenovo\Downloads\shop banner.jpeg" width="200" height="200" alt="Shopping banner">
-            <h2>Welcome to my cartjoy</h2>
-            <p>Your one-stop shop for all your needs. Explore our wide range of products we gave u Quality products at fair prices-simple,fastand secure.</p>
-            <p>Discover premium products with fast delivery.</p>
-            <a href="products.html" class="btn-primary">shop the latest</a>
+
+    <!-- Hero Section -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Discover Handcrafted Excellence</h1>
+            <p>Explore unique, artisan-made products across diverse categories</p>
+            <a href="/scr/tamplets/product.html" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="home-container">
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>Quick and reliable shipping to your doorstep</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Secure Payment</h3>
+                <p>Safe and encrypted transactions for peace of mind</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Quality Products</h3>
+                <p>Handpicked artisan products with exceptional quality</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>24/7 Support</h3>
+                <p>Dedicated customer service ready to help</p>
+            </div>
+        </section>
+
+        <!-- Categories Preview Section -->
+        <section class="categories-section">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Explore our curated collections of handmade products</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span class="category-icon">🧴</span>
+                    </div>
+                    <h3>Personal Care</h3>
+                    <p>Soaps, bath bombs, oils & candles</p>
+                    <a href="/scr/tamplets/product.html" class="category-link">Browse →</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span class="category-icon">🏠</span>
+                    </div>
+                    <h3>Home Decor</h3>
+                    <p>Pottery, macrame, textiles & art</p>
+                    <a href="/scr/tamplets/product.html" class="category-link">Browse →</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <span class="category-icon">👗</span>
+                    </div>
+                    <h3>Fashion & Accessories</h3>
+                    <p>Jewelry, bags, clothing & more</p>
+                    <a href="/scr/tamplets/product.html" class="category-link">Browse →</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <span class="category-icon">🍰</span>
+                    </div>
+                    <h3>Edibles</h3>
+                    <p>Baked goods, jams, honey & more</p>
+                    <a href="/scr/tamplets/product.html" class="category-link">Browse →</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
+                        <span class="category-icon">🎨</span>
+                    </div>
+                    <h3>Digital Products</h3>
+                    <p>Prints, illustrations & courses</p>
+                    <a href="/scr/tamplets/product.html" class="category-link">Browse →</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span class="category-icon">✨</span>
+                    </div>
+                    <h3>All Products</h3>
+                    <p>Explore our complete collection</p>
+                    <a href="/scr/tamplets/product.html" class="category-link">Browse →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-section">
+            <div class="section-header">
+                <h2>Why Choose My CartJoy?</h2>
+                <p>We bring authentic handmade products directly to you</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>🎯 Authentic Products</h3>
+                    <p>Every item is carefully selected from talented artisans. We ensure quality and authenticity in every product.</p>
+                </div>
+                <div class="why-card">
+                    <h3>💚 Eco-Friendly</h3>
+                    <p>We support sustainable and eco-friendly practices. Our products are made with care for the environment.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🤝 Support Artisans</h3>
+                    <p>Your purchase directly supports talented artisans and small businesses in their creative journey.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🌟 Premium Quality</h3>
+                    <p>Quality is our priority. Every product undergoes quality checks before reaching you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive deals, new arrivals, and artisan stories delivered to your inbox</p>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About</h3>
-                <p>plot no 35 durandhar colony warje Pune</p>
-                <p>+2 392 3929 210</p>
-                <p>tech.india.pranjal@gmail.com</p>
-                <div class="email-signup">
-                    <input type="email" placeholder="Enter email address">
-                    <button type="submit">→</button>
-                </div>
+                <h3>About Us</h3>
+                <p>My CartJoy is dedicated to bringing authentic handmade products to your doorstep.</p>
+                <p><strong>Address:</strong> Plot No 35, Durandhar Colony, Warje, Pune</p>
+                <p><strong>Phone:</strong> +91 2392 3929 210</p>
+                <p><strong>Email:</strong> tech.india.pranjal@gmail.com</p>
             </div>
             <div class="footer-section">
-                <h3>Latest News</h3>
-                <div class="news-item">
-                    <img src="news-image.jpg" alt="news">
-                    <p>Discover our latest home decor collection featuring elegant designs and modern aesthetics for your living space.</p>
-                    <small>Oct 16, 2019 Admin 18</small>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Information</h3>
+                <h3>Quick Links</h3>
                 <ul class="list-unstyled">
-                    <li><a href="/scr/tamplets/about.html" class="footer-link">About</a></li>
-                    <li><a href="/scr/tamplets/products.html" class="footer-link">Products</a></li>
-                    <li><a href="/scr/tamplets/blog.html" class="footer-link">Blog</a></li>
-                    <li><a href="/scr/tamplets/contact.html" class="footer-link">Contact</a></li>
-                    <li><a href="/scr/tamplets/help.html" class="footer-link">Help & Support</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/scr/tamplets/product.html">Products</a></li>
+                    <li><a href="/scr/tamplets/about.html">About</a></li>
+                    <li><a href="/scr/tamplets/contact.html">Contact</a></li>
+                    <li><a href="/scr/tamplets/privacy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Instagram</h3>
-                <div class="instagram-grid">
-                    <img src="instagram-1.jpg" alt="instagram">
-                    <img src="instagram-2.jpg" alt="instagram">
-                    <img src="instagram-3.jpg" alt="instagram">
-                    <img src="instagram-4.jpg" alt="instagram">
-                    <img src="instagram-5.jpg" alt="instagram">
-                    <img src="instagram-6.jpg" alt="instagram">
+                <h3>Categories</h3>
+                <ul class="list-unstyled">
+                    <li><a href="/scr/tamplets/product.html">Personal Care</a></li>
+                    <li><a href="/scr/tamplets/product.html">Home Decor</a></li>
+                    <li><a href="/scr/tamplets/product.html">Fashion & Accessories</a></li>
+                    <li><a href="/scr/tamplets/product.html">Edibles</a></li>
+                    <li><a href="/scr/tamplets/product.html">Digital Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘 Facebook</a>
+                    <a href="#" class="social-icon">📷 Instagram</a>
+                    <a href="#" class="social-icon">🐦 Twitter</a>
+                    <a href="#" class="social-icon">▶️ YouTube</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; Copyright ©2021 All rights reserved.</p>
+            <p>&copy; 2026 My CartJoy. All rights reserved. | Handcrafted with ❤️</p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
