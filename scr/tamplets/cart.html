@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - My CartJoy</title>
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/cart.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -24,36 +26,126 @@
         </div>
     </header>
 
-    <main class="container">
-        <h1>Your Shopping Cart</h1>
-        <div class="cart-items" id="cart-items">
-            <!-- Cart items will be dynamically added here -->
+    <main class="cart-container">
+        <div class="cart-header">
+            <h1>🛒 Your Shopping Cart</h1>
+            <p id="cart-status">Your cart is empty</p>
         </div>
-        <div class="cart-total">
-            <h2>Total: $<span id="total-amount">0.00</span></h2>
-            <button class="btn-checkout">Proceed to Checkout</button>
+
+        <!-- Empty Cart Message -->
+        <div id="empty-cart-msg" class="empty-cart">
+            <span class="empty-cart-icon">🛍️</span>
+            <h2>Your Cart is Empty</h2>
+            <p>Looks like you haven't added any products yet. Start shopping and discover amazing handmade items!</p>
+            <a href="/scr/tamplets/product.html" class="continue-shopping">Continue Shopping</a>
+        </div>
+
+        <!-- Cart Items Display -->
+        <div id="cart-content" style="display: none;">
+            <div class="cart-wrapper">
+                <!-- Cart Items List -->
+                <div class="cart-items-section">
+                    <div class="cart-items-header">
+                        <div>Product</div>
+                        <div style="text-align: center;">Quantity</div>
+                        <div style="text-align: right;">Price</div>
+                        <div style="text-align: right;">Total</div>
+                        <div style="text-align: center;">Action</div>
+                    </div>
+                    <div id="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                </div>
+
+                <!-- Cart Summary Sidebar -->
+                <div class="cart-summary">
+                    <h3 class="summary-title">Order Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span class="summary-value">₹<span id="subtotal">0.00</span></span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Discount:</span>
+                        <span class="summary-value">₹<span id="discount-amount">0.00</span></span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span class="summary-value">₹<span id="shipping">0.00</span></span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Tax (10%):</span>
+                        <span class="summary-value">₹<span id="tax-amount">0.00</span></span>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span>Total Amount:</span>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+                        <span class="summary-value">₹<span id="total-amount">0.00</span></span>
+                    </div>
+
+                    <div class="discount-banner" id="discount-banner" style="display: none;">
+                        You're saving ₹<span id="saving-amount">0</span> today! 🎉
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button class="checkout-btn" id="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                        <a href="/scr/tamplets/product.html" class="continue-shopping-btn">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     
+    <!-- Footer -->
     <footer class="site-footer">
-        <div class="container footer-flex">
-            <p>&copy; 2026 my cartjoy.all right reserved</p>
-            <div class="social-links">
-                <a href="#" class="social-link">facebook</a>
-                <a href="#" class="social-link">twitter</a>
-                <a href="#" class="social-link">instagram</a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>My CartJoy is dedicated to bringing authentic handmade products to your doorstep.</p>
+                <p><strong>Address:</strong> Plot No 35, Durandhar Colony, Warje, Pune</p>
+                <p><strong>Phone:</strong> +91 2392 3929 210</p>
+                <p><strong>Email:</strong> tech.india.pranjal@gmail.com</p>
             </div>
-            <nav class="footer-nav">
-                <ul class="footer-nav-list">
-                    <li class="footer-nav-item"><a href="index.html" class="footer-nav-link">home</a></li>
-                    <li class="footer-nav-item"><a href="products.html" class="footer-nav-link">products</a></li>
-                    <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">about us</a></li>
-                    <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">contact</a></li>
-                    <li class="footer-nav-item"><a href="privacy.html" class="footer-nav-link">privacy</a></li>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="list-unstyled">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/scr/tamplets/product.html">Products</a></li>
+                    <li><a href="/scr/tamplets/about.html">About</a></li>
+                    <li><a href="/scr/tamplets/contact.html">Contact</a></li>
+                    <li><a href="/scr/tamplets/privacy.html">Privacy Policy</a></li>
                 </ul>
-            </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul class="list-unstyled">
+                    <li><a href="/scr/tamplets/product.html">Personal Care</a></li>
+                    <li><a href="/scr/tamplets/product.html">Home Decor</a></li>
+                    <li><a href="/scr/tamplets/product.html">Fashion & Accessories</a></li>
+                    <li><a href="/scr/tamplets/product.html">Edibles</a></li>
+                    <li><a href="/scr/tamplets/product.html">Digital Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘 Facebook</a>
+                    <a href="#" class="social-icon">📷 Instagram</a>
+                    <a href="#" class="social-icon">🐦 Twitter</a>
+                    <a href="#" class="social-icon">▶️ YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 My CartJoy. All rights reserved. | Handcrafted with ❤️</p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
